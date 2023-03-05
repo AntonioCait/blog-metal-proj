@@ -1,0 +1,24 @@
+.categoryButton {
+	background-color: var(--darkGray);
+	color: var(--whitePlate);
+	border-radius: 9999px;
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 400;
+	cursor: pointer;
+	border: none;
+	/* shadow */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.categoryButton:hover {
+	background-color: var(--blue);
+	transition: 0.3s;
+}
+
+.categoryButton:active {
+	background-color: var(--black);
+	transition: 0.3s;
+}

@@ -1,0 +1,22 @@
+:root {
+	--whitePlate: #f2f2f2;
+	--pureqwhite: #ffffff;
+	--black: #0d0d0d;
+	--darkGray: #556574;
+	--blue: #031625;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--whitePlate);
+	color: var(--black);
+	margin-top: 80px;
+}

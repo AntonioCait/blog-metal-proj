@@ -1,0 +1,47 @@
+.nav {
+	width: 100%;
+	padding: 0 2rem;
+	background-color: var(--whitePlate);
+	/* shadow */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	height: 80px;
+	/* always top */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	/* glass effect */
+}
+
+.nav .navContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	padding: 1rem 0;
+}
+
+.navLogo {
+	display: grid;
+	grid-template-columns: 1fr;
+	/* align to the left */
+	justify-items: start;
+}
+
+.navLogo img {
+	width: 50px;
+	height: 50px;
+}
+
+.navLinks {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	text-align: center;
+}
+
+.navLinks a {
+	color: var(--black);
+	text-decoration: none;
+	font-size: 1.2rem;
+}

@@ -1,0 +1,27 @@
+.newsContainer {
+	width: 100%;
+}
+
+.news {
+	width: 80%;
+	margin: 0 auto;
+	/* rem padding */
+	padding: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+}
+
+.newsLink {
+	text-decoration: none;
+	color: var(--black);
+	font-size: 1rem;
+}
+
+/* media querie from 320px to 1024px */
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+	.news {
+		width: 100%;
+	}
+}
