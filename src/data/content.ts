@@ -84,4 +84,16 @@ export const content: ContentProps[] = [
 		type: 'News',
 		date: '2023-03-02',
 	},
+	{
+		id: '6',
+		title: `Veil Of Maya Announce New Album ‘[M]other’ + Drop Single “Red Fur”`,
+		description: `Today, Veil Of Maya have announced the details of their long-awaited seventh album alongside the surprise drop of a third single, “Red Fur“. The new record, entitled [M]other, is set to release May 12th.`,
+		image: 'https://i0.wp.com/boolintunes.com/wp-content/uploads/2023/03/Veil-banner.png?w=1170&ssl=1',
+		content: `
+		Today, Veil Of Maya have announced the details of their long-awaited seventh album alongside the surprise drop of a third single, “Red Fur“. The new record, entitled [M]other, is set to release May 12th. The album is produced by Zach Jones, who has worked recently with the likes of Chelsea Grin, Fit For a King, and Silent Planet, making this the fifth consecutive Veil Of Maya album with a different producer. The four now-standalone singles released between 2017’s False Idol and this newest album cycle also boast a different producer (“Members Only” – Taylor Larsen; “Outsider” – Michael Taylor; “Viscera” – Mark Okubo; “Outrun” – Josh Strock). Certainly, the band appear keen to continually evolve, and their latest offering prior to the announcement, “Godhead”, saw them experimenting firmly within the realms of tech-death. 
+		`,
+		category: 'Djent',
+		type: 'News',
+		date: '2023-03-19',
+	},
 ];

@@ -13,7 +13,10 @@ function News() {
 	const [news, setNews] = useState(content);
 
 	useEffect(() => {
-		setNews(content.slice(0, -1).reverse());
+		// setNews(content.slice(0, -1).reverse());
+		const reversedNews = [...content];
+		reversedNews.reverse();
+		setNews(reversedNews);
 	}, []);
 
 	return (

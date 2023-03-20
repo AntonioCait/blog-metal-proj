@@ -9,22 +9,38 @@ import CategoryButton from '../components/CategoryButton';
 
 function Categories() {
 	// refactor lastPosts to use useState
-	const [posts, setPosts] = useState(content);
+	// const [posts, setPosts] = useState(content);
 	const [news, setNews] = useState(content);
+	const [categories, setCategories] = useState(content);
 
 	const filterPostsByCategory = (category: string) => {
 		const filteredPosts = content.filter((post) => post.category === category);
-		setPosts(filteredPosts);
+		setCategories(filteredPosts);
 	};
 
 	const showAllPosts = () => {
-		setPosts(content.slice(0, -1).reverse());
+		// setPosts(content.slice(0, -1).reverse());
+		// sort ascending
+		// setCategories(content.sort((a, b) => Number(a.id) - Number(b.id)));
+		// sort descending
+		// setCategories(content.sort((a, b) => Number(b.id) - Number(a.id)));
+		// reverse array
+		// Create a copy of the original array using the spread operator
+		const reversedCategories = [...content];
+
+		// Reverse the copied array
+		reversedCategories.reverse();
+
+		// Update the state with the reversed array
+		setCategories(reversedCategories);
 	};
 
 	// by default, show all posts
 
 	useEffect(() => {
-		setPosts(content.slice(0, -1).reverse());
+		// setPosts(content.slice(0, -1).reverse());
+		// setPosts(content.reverse());
+		showAllPosts();
 	}, []);
 	return (
 		<>
@@ -37,7 +53,7 @@ function Categories() {
                                 <LastPostCard post={post} />
                             </Link>
                         ))} */}
-							{posts.map((post: PostProps) => (
+							{categories.map((post: PostProps) => (
 								<Link to={'/post/' + post.id} key={post.id}>
 									<LastPostCard post={post} />
 								</Link>

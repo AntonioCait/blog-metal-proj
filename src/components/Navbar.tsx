@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import Logo from '../assets/aalogo.png';
+// useState
+import { useState } from 'react';
+// react icon
+// AiOutlineAlignRight
+import { AiOutlineAlignRight } from 'react-icons/ai';
 
 const Links = [
 	{
@@ -27,6 +32,11 @@ const Links = [
 ];
 
 function Nav() {
+	const [showLinks, setShowLinks] = useState<boolean>(false);
+
+	const handleMobileMenu = () => {
+		setShowLinks(!showLinks);
+	};
 	return (
 		<>
 			<nav className={styles.nav}>
@@ -47,8 +57,33 @@ function Nav() {
 							))
 						}
 					</div>
+					{/* hambuger menu */}
+					<div className={styles.navHamburger}>
+						<AiOutlineAlignRight onClick={handleMobileMenu} style={{ color: '#1e1e1e', fontSize: '2rem' }} />
+					</div>
 				</div>
 			</nav>
+			{/* nav menu on mobile */}
+			{showLinks && (
+				<div className={styles.navLinksMobile}>
+					{
+						// from index 1 to the end
+						Links.slice(1).map((link) => (
+							<div>
+								<Link
+									onClick={() => {
+										setShowLinks(false);
+									}}
+									to={link.path}
+									key={link.id}
+								>
+									{link.name}
+								</Link>
+							</div>
+						))
+					}
+				</div>
+			)}
 		</>
 	);
 }
